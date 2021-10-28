@@ -127,7 +127,7 @@ export default function Home() {
   }, [currentOperand])
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen font-sans font-normal bg-gray-200">
+    <div className="flex flex-col items-center justify-center min-h-screen font-sans font-normal sm:p-2 bg-gray-200">
       <Head>
         <title>Calculator</title>
         <link rel="icon" href="/favicon.ico" />
@@ -138,26 +138,26 @@ export default function Home() {
           <div className="flex flex-row-reverse overflow-hidden text-2xl text-gray-500 w-96 text-right">{`${getDisplayNumber(prevOperand)} ${operation ? operation : ''}`}</div>
           <div className="flex flex-row-reverse overflow-hidden pt-2 text-4xl text-black w-96 text-right">{getDisplayNumber(currentOperand)}</div>
         </div>
-        <button className="w-16 h-16 sm:w-24 sm:h-24 pointer text-3xl outline-none rounded-full font-bold bg-gray-200 m-2 text-gray-700 hover:bg-gray-50" onClick={clear}>AC</button>
-        <button className="w-16 h-16 sm:w-24 sm:h-24 pointer text-3xl outline-none rounded-full font-bold bg-gray-200 m-2 text-gray-700 hover:bg-gray-50" onClick={deleteOne}>DEL</button>
-        <button className="w-16 h-16 sm:w-24 sm:h-24 pointer text-3xl outline-none rounded-full font-bold bg-gray-200 m-2 text-gray-700 hover:bg-gray-50" onClick={e => chooseOperation(e.target.innerText)}>%</button>
-        <button className="w-16 h-16 sm:w-24 sm:h-24 pointer text-3xl outline-none rounded-full font-bold bg-[#fd8c3b] m-2 text-white hover:bg-[#FFA655]" onClick={e => chooseOperation(e.target.innerText)}>÷</button>
-        <button className="w-16 h-16 sm:w-24 sm:h-24 pointer text-3xl outline-none rounded-full font-bold bg-gray-500 m-2 text-white hover:bg-gray-400" onClick={e => appendNumber(e.target.innerText)}>1</button>
-        <button className="w-16 h-16 sm:w-24 sm:h-24 pointer text-3xl outline-none rounded-full font-bold bg-gray-500 m-2 text-white hover:bg-gray-400" onClick={e => appendNumber(e.target.innerText)}>2</button>
-        <button className="w-16 h-16 sm:w-24 sm:h-24 pointer text-3xl outline-none rounded-full font-bold bg-gray-500 m-2 text-white hover:bg-gray-400" onClick={e => appendNumber(e.target.innerText)}>3</button>
-        <button className="w-16 h-16 sm:w-24 sm:h-24 pointer text-3xl outline-none rounded-full font-bold bg-[#fd8c3b] m-2 text-white hover:bg-[#FFA655]" onClick={e => chooseOperation(e.target.innerText)}>×</button>
-        <button className="w-16 h-16 sm:w-24 sm:h-24 pointer text-3xl outline-none rounded-full font-bold bg-gray-500 m-2 text-white hover:bg-gray-400" onClick={e => appendNumber(e.target.innerText)}>4</button>
-        <button className="w-16 h-16 sm:w-24 sm:h-24 pointer text-3xl outline-none rounded-full font-bold bg-gray-500 m-2 text-white hover:bg-gray-400" onClick={e => appendNumber(e.target.innerText)}>5</button>
-        <button className="w-16 h-16 sm:w-24 sm:h-24 pointer text-3xl outline-none rounded-full font-bold bg-gray-500 m-2 text-white hover:bg-gray-400" onClick={e => appendNumber(e.target.innerText)}>6</button>
-        <button className="w-16 h-16 sm:w-24 sm:h-24 pointer text-3xl outline-none rounded-full font-bold bg-[#fd8c3b] m-2 text-white hover:bg-[#FFA655]" onClick={e => chooseOperation(e.target.innerText)}>-</button>
-        <button className="w-16 h-16 sm:w-24 sm:h-24 pointer text-3xl outline-none rounded-full font-bold bg-gray-500 m-2 text-white hover:bg-gray-400" onClick={e => appendNumber(e.target.innerText)}>7</button>
-        <button className="w-16 h-16 sm:w-24 sm:h-24 pointer text-3xl outline-none rounded-full font-bold bg-gray-500 m-2 text-white hover:bg-gray-400" onClick={e => appendNumber(e.target.innerText)}>8</button>
-        <button className="w-16 h-16 sm:w-24 sm:h-24 pointer text-3xl outline-none rounded-full font-bold bg-gray-500 m-2 text-white hover:bg-gray-400" onClick={e => appendNumber(e.target.innerText)}>9</button>
-        <button className="w-16 h-16 sm:w-24 sm:h-24 pointer text-3xl outline-none rounded-full font-bold bg-[#fd8c3b] m-2 text-white hover:bg-[#FFA655]" onClick={e => chooseOperation(e.target.innerText)}>+</button>
-        <button className="w-16 h-16 sm:w-24 sm:h-24 pointer text-3xl outline-none rounded-full font-bold bg-gray-500 m-2 text-white hover:bg-gray-400" onClick={e => appendNumber(e.target.innerText)}>00</button>
-        <button className="w-16 h-16 sm:w-24 sm:h-24 pointer text-3xl outline-none rounded-full font-bold bg-gray-500 m-2 text-white hover:bg-gray-400" onClick={e => appendNumber(e.target.innerText)}>0</button>
-        <button className="w-16 h-16 sm:w-24 sm:h-24 pointer text-3xl outline-none rounded-full font-bold bg-gray-500 m-2 text-white hover:bg-gray-400" onClick={e => appendNumber(e.target.innerText)}>.</button>
-        <button className="w-16 h-16 sm:w-24 sm:h-24 pointer text-3xl outline-none rounded-full font-bold bg-[#fd8c3b] m-2 text-white hover:bg-[#FFA655]" onClick={compute}>=</button>
+        <button className="w-16 h-16 sm:w-20 sm:h-20 pointer text-3xl outline-none rounded-full font-bold bg-gray-200 m-2 text-gray-700 hover:bg-gray-50" onClick={clear}>AC</button>
+        <button className="w-16 h-16 sm:w-20 sm:h-20 pointer text-3xl outline-none rounded-full font-bold bg-gray-200 m-2 text-gray-700 hover:bg-gray-50" onClick={deleteOne}>DEL</button>
+        <button className="w-16 h-16 sm:w-20 sm:h-20 pointer text-3xl outline-none rounded-full font-bold bg-gray-200 m-2 text-gray-700 hover:bg-gray-50" onClick={e => chooseOperation(e.target.innerText)}>%</button>
+        <button className="w-16 h-16 sm:w-20 sm:h-20 pointer text-3xl outline-none rounded-full font-bold bg-[#fd8c3b] m-2 text-white hover:bg-[#FFA655]" onClick={e => chooseOperation(e.target.innerText)}>÷</button>
+        <button className="w-16 h-16 sm:w-20 sm:h-20 pointer text-3xl outline-none rounded-full font-bold bg-gray-500 m-2 text-white hover:bg-gray-400" onClick={e => appendNumber(e.target.innerText)}>1</button>
+        <button className="w-16 h-16 sm:w-20 sm:h-20 pointer text-3xl outline-none rounded-full font-bold bg-gray-500 m-2 text-white hover:bg-gray-400" onClick={e => appendNumber(e.target.innerText)}>2</button>
+        <button className="w-16 h-16 sm:w-20 sm:h-20 pointer text-3xl outline-none rounded-full font-bold bg-gray-500 m-2 text-white hover:bg-gray-400" onClick={e => appendNumber(e.target.innerText)}>3</button>
+        <button className="w-16 h-16 sm:w-20 sm:h-20 pointer text-3xl outline-none rounded-full font-bold bg-[#fd8c3b] m-2 text-white hover:bg-[#FFA655]" onClick={e => chooseOperation(e.target.innerText)}>×</button>
+        <button className="w-16 h-16 sm:w-20 sm:h-20 pointer text-3xl outline-none rounded-full font-bold bg-gray-500 m-2 text-white hover:bg-gray-400" onClick={e => appendNumber(e.target.innerText)}>4</button>
+        <button className="w-16 h-16 sm:w-20 sm:h-20 pointer text-3xl outline-none rounded-full font-bold bg-gray-500 m-2 text-white hover:bg-gray-400" onClick={e => appendNumber(e.target.innerText)}>5</button>
+        <button className="w-16 h-16 sm:w-20 sm:h-20 pointer text-3xl outline-none rounded-full font-bold bg-gray-500 m-2 text-white hover:bg-gray-400" onClick={e => appendNumber(e.target.innerText)}>6</button>
+        <button className="w-16 h-16 sm:w-20 sm:h-20 pointer text-3xl outline-none rounded-full font-bold bg-[#fd8c3b] m-2 text-white hover:bg-[#FFA655]" onClick={e => chooseOperation(e.target.innerText)}>-</button>
+        <button className="w-16 h-16 sm:w-20 sm:h-20 pointer text-3xl outline-none rounded-full font-bold bg-gray-500 m-2 text-white hover:bg-gray-400" onClick={e => appendNumber(e.target.innerText)}>7</button>
+        <button className="w-16 h-16 sm:w-20 sm:h-20 pointer text-3xl outline-none rounded-full font-bold bg-gray-500 m-2 text-white hover:bg-gray-400" onClick={e => appendNumber(e.target.innerText)}>8</button>
+        <button className="w-16 h-16 sm:w-20 sm:h-20 pointer text-3xl outline-none rounded-full font-bold bg-gray-500 m-2 text-white hover:bg-gray-400" onClick={e => appendNumber(e.target.innerText)}>9</button>
+        <button className="w-16 h-16 sm:w-20 sm:h-20 pointer text-3xl outline-none rounded-full font-bold bg-[#fd8c3b] m-2 text-white hover:bg-[#FFA655]" onClick={e => chooseOperation(e.target.innerText)}>+</button>
+        <button className="w-16 h-16 sm:w-20 sm:h-20 pointer text-3xl outline-none rounded-full font-bold bg-gray-500 m-2 text-white hover:bg-gray-400" onClick={e => appendNumber(e.target.innerText)}>00</button>
+        <button className="w-16 h-16 sm:w-20 sm:h-20 pointer text-3xl outline-none rounded-full font-bold bg-gray-500 m-2 text-white hover:bg-gray-400" onClick={e => appendNumber(e.target.innerText)}>0</button>
+        <button className="w-16 h-16 sm:w-20 sm:h-20 pointer text-3xl outline-none rounded-full font-bold bg-gray-500 m-2 text-white hover:bg-gray-400" onClick={e => appendNumber(e.target.innerText)}>.</button>
+        <button className="w-16 h-16 sm:w-20 sm:h-20 pointer text-3xl outline-none rounded-full font-bold bg-[#fd8c3b] m-2 text-white hover:bg-[#FFA655]" onClick={compute}>=</button>
       </div>
     </div>
   )
